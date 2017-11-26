@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'Seat Ibiza';
   date = new Date();
 
-  car: Car;
+  days = ['Pon', 'Wto', 'Sro', 'Czw', 'Pia', 'Sob', 'Nie'];
+
+  cars = new Array<Car>();
+  constructor() {
+    this.cars.push(new Car('Clio', 1997), new Car('Yaris', 2003));
+  }
 }
 
 class Car {

@@ -1,6 +1,21 @@
 <p>Dzisiaj jest {{ date | date: 'dd-MM-yy' }} </p>
 
 <p>
-  Samochod:
-  <br> {{car?.name}} {{car && car.year}}r.
+  Dni Tygodnia:
 </p>
+
+<ul>
+  <li *ngFor="let day of days">
+    {{day}}
+  </li>
+</ul>
+
+<p>
+  Samochody:
+</p>
+
+<ul>
+  <li *ngFor="let car of cars">
+    {{car.name}}, {{car.year}}
+  </li>
+</ul>
