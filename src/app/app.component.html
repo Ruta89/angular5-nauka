@@ -14,8 +14,6 @@
   Samochody:
 </p>
 
-<ul>
-  <li *ngFor="let car of cars">
-    {{car.name}}, {{car.year}}
-  </li>
-</ul>
+<div *ngFor="let car of cars; let i = index">
+  #{{i+1}} {{car.name}}, {{car.year}}
+</div>
