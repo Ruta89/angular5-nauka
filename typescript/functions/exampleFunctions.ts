@@ -34,6 +34,7 @@ class ExampleFunctions {
 let example = new ExampleFunctions();
 example.showMsg();
 example.hello();
+console.log(example.hello());
 example.hello2('Witaj hello2');
 example.hello3('Witaj hello3');
 example.hello4('Witaj hello4');
