@@ -1,19 +1,21 @@
 <p>Dzisiaj jest {{ date | date: 'dd-MM-yy' }} </p>
 
-<p>
-  Dni Tygodnia:
-</p>
+<p> Dni Tygodnia: </p>
+<div *ngIf="days.length > 0">
+  <ul>
+    <div *ngFor="let day of days; let e = even">
+      <li *ngIf="e == true">
+        {{day}}
+      </li>
+    </div>
+  </ul>
 
-<ul>
-  <li *ngFor="let day of days">
-    {{day}}
-  </li>
-</ul>
+  <p>
+    Samochody:
+  </p>
 
-<p>
-  Samochody:
-</p>
-
-<div *ngFor="let car of cars; let i = index">
-  #{{i+1}} {{car.name}}, {{car.year}}
-</div>
+  <div *ngFor="let car of cars; let i = index">
+    <div *ngIf="car.year > 1999">
+      #{{i+1}} {{car.name}}, {{car.year}}
+    </div>
+  </div>
