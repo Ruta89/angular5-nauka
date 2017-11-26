@@ -1,10 +1,6 @@
 <p>Dzisiaj jest {{ date | date: 'dd-MM-yy' }} </p>
-<p>
-  Samochod:
-  <br> {{showCar()}}
-</p>
 
 <p>
   Samochod:
-  <br> {{car.name}} {{car.year}}r.
+  <br> {{car?.name}} {{car && car.year}}r.
 </p>

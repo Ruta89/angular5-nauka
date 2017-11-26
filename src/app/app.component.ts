@@ -9,11 +9,7 @@ export class AppComponent {
   name = 'Seat Ibiza';
   date = new Date();
 
-  car = new Car('Tico', 2000);
-
-  showCar() {
-    return 'Moj samochod to ' + this.car.name + ' rocznik: ' + this.car.year;
-  }
+  car: Car;
 }
 
 class Car {
