@@ -1,5 +1,5 @@
 # AngularKurs
-
+![ngOnChanges](/src/assets/img/ngOnChanges.png?raw=true "ngOnChanges")
 ## Basic Type
 
 ![Basic Type](/src/assets/img/basicType.png?raw=true "Basic Type")

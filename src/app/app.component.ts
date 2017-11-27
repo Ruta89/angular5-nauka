@@ -1,5 +1,5 @@
 import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
-
+import { Car } from '../models/car';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,7 +20,4 @@ export class AppComponent {
   destroy() {
     this.show = !this.show;
   }
-}
-export class Car {
-  constructor(public name: string) {}
 }
