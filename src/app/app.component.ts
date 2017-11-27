@@ -14,7 +14,7 @@ export class AppComponent {
     this.title = 'Angular jest zajebisty!';
   }
   changeCar() {
-    this.car.name = 'Ferari';
+    this.car = new Car('Viper');
   }
   nothing() {}
   destroy() {

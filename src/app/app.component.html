@@ -1,5 +1,5 @@
 <div *ngIf="show">
-  <app-child [inputText]="title" [inputCar]="car"></app-child>
+  <app-child [inputText]="title" [inputCar]="car">Wysyłam dodatkowy content</app-child>
 </div>
 <button (click)="changeTitle()">Zmien Tytul</button>
 <button (click)="changeCar()">Zmien Samochod</button>
