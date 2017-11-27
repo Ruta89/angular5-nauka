@@ -1,6 +1,11 @@
 # AngularKurs
 
-![Alt text1](/src/assets/img/basicType.png?raw=true "1")
-![Alt text1](/src/assets/img/1.png?raw=true "1")
-![Alt text2](/src/assets/img/2.png?raw=true "2")
-![Alt text3](/src/assets/img/3.png?raw=true "3")
+## Basic Type
+
+![Basic Type](/src/assets/img/basicType.png?raw=true "Basic Type")
+## Todo
+![Todo](/src/assets/img/1.png?raw=true "1")
+## Todo
+![Todo2](/src/assets/img/2.png?raw=true "2")
+## Todo structure
+![Todo structure](/src/assets/img/3.png?raw=true "Todo structure")
