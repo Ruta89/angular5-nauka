@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,17 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tasksList: Array<string> = [];
-  tasksDone: Array<string> = [];
+  title = 'Nauka angulara 5';
+  car = new Car('Mazda');
+  show = true;
 
-  add(task: string) {
-    this.tasksList.push(task);
+  changeTitle() {
+    this.title = 'Angular jest zajebisty!';
   }
-  remove(task: string) {
-    this.tasksList = this.tasksList.filter(e => e !== task);
+  changeCar() {
+    this.car.name = 'Ferari';
   }
-  done(task: string) {
-    this.tasksDone.push(task);
-    this.remove(task);
+  nothing() {}
+  destroy() {
+    this.show = !this.show;
   }
+}
+export class Car {
+  constructor(public name: string) {}
 }
