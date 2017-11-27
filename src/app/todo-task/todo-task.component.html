@@ -1,0 +1,15 @@
+<p>
+  Zadania: {{tasksList.length}}
+</p>
+
+<ul *ngIf="tasksList.length > 0; else noTask">
+  <li *ngFor="let task of tasksList">
+    {{ task }}
+    <button (click)="remove(task)">Usun</button>
+    <button (click)="done(task)">Zrobione</button>
+  </li>
+</ul>
+
+<ng-template #noTask>
+  <p>Nie ma zadan</p>
+</ng-template>

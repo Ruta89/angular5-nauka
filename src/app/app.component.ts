@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +6,17 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tasksList: Array<string>;
-  constructor() {
-    this.tasksList = ['zrobic pranie', 'wczasy pod grusza', 'kupic prezent'];
+  tasksList: Array<string> = [];
+  tasksDone: Array<string> = [];
+
+  add(task: string) {
+    this.tasksList.push(task);
   }
-  selected(task: string): void {
-    console.log('ojciec: ' + task);
+  remove(task: string) {
+    this.tasksList = this.tasksList.filter(e => e !== task);
+  }
+  done(task: string) {
+    this.tasksDone.push(task);
+    this.remove(task);
   }
 }
