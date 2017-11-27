@@ -10,4 +10,7 @@ export class AppComponent {
   constructor() {
     this.tasksList = ['zrobic pranie', 'wczasy pod grusza', 'kupic prezent'];
   }
+  selected(task: string): void {
+    console.log('ojciec: ' + task);
+  }
 }
