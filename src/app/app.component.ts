@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,16 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  date = new Date();
-
-  days = ['Pon', 'Wto', 'Sro', 'Czw', 'Pia', 'Sob', 'Nie'];
-
-  cars = new Array<Car>();
+  tasksList: Array<string>;
   constructor() {
-    this.cars.push(new Car('Clio', 1997), new Car('Yaris', 2003));
+    this.tasksList = ['zrobic pranie', 'wczasy pod grusza', 'kupic prezent'];
   }
-}
-
-class Car {
-  constructor(public name: string, public year: number) {}
 }
