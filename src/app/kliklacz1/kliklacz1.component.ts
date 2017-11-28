@@ -3,8 +3,7 @@ import { ClickService } from '../services/click.service';
 @Component({
   selector: 'app-kliklacz1',
   templateUrl: './kliklacz1.component.html',
-  styleUrls: ['./kliklacz1.component.css'],
-  providers: [ClickService]
+  styleUrls: ['./kliklacz1.component.css']
 })
 export class Kliklacz1Component implements OnInit {
   click = 0;

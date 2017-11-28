@@ -11,7 +11,7 @@ import { Klikacz2Component } from './klikacz2/klikacz2.component';
 @NgModule({
   declarations: [AppComponent, Kliklacz1Component, Klikacz2Component],
   imports: [BrowserModule, FormsModule],
-  providers: [],
+  providers: [ClickService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
