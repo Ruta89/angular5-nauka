@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+li {
+  background: lightgray;
+  margin: 5px
+}
+
+.odd-li {
+  background: lavender;
+  margin: 5ps;
+}
+
+.last-li {
+  background: pink;
+  margin: 5px;
+}
