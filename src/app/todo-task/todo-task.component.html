@@ -1,15 +1,17 @@
-<p>
-  Zadania: {{tasksList.length}}
-</p>
+<ng-container *ngIf="tasksList.length > 0; else noTask">
+  <p [ngStyle]="{color: getColor()}">
+    Zadania do wykonania: {{ tasksList.length }}
+  </p>
 
-<ul *ngIf="tasksList.length > 0; else noTask">
-  <li *ngFor="let task of tasksList">
-    {{ task }}
-    <button (click)="remove(task)">Usun</button>
-    <button (click)="done(task)">Zrobione</button>
-  </li>
-</ul>
+  <ul>
+    <li *ngFor="let task of tasksList">
+      {{ task }}
+      <button (click)="remove(task)">Usun</button>
+      <button (click)="done(task)">Zrobione</button>
+    </li>
+  </ul>
+</ng-container>
 
 <ng-template #noTask>
-  <p>Nie ma zadan</p>
+  <p>Nie ma zadan, jesteś mistrzem, masz czas wolny</p>
 </ng-template>
