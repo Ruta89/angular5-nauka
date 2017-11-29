@@ -1,4 +1,5 @@
-import { ClickService } from './services/click.service';
+import { LogService } from './services/log.service';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -11,7 +12,7 @@ import { Klikacz2Component } from './klikacz2/klikacz2.component';
 @NgModule({
   declarations: [AppComponent, Kliklacz1Component, Klikacz2Component],
   imports: [BrowserModule, FormsModule],
-  providers: [ClickService],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
