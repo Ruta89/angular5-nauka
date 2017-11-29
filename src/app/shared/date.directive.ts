@@ -10,4 +10,8 @@ export class DateDirective {
   mouseenter(eventDate: Event) {
     console.log('mouseenter');
   }
+  @HostListener('mouseleave')
+  mouseleave(eventDate: Event) {
+    console.log('mouseleave');
+  }
 }
