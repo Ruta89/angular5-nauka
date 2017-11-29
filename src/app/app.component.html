@@ -1,6 +1,19 @@
-<h1>Apka Klikacz</h1>
-<div class="box">
-  <app-kliklacz1></app-kliklacz1>
-  Suma kliknięć: {{allClicks}}
-  <app-klikacz2></app-klikacz2>
+<div>
+  <div class="container">
+
+    <app-add-task (emitTask)="add($event)"></app-add-task>
+
+  </div>
+
+  <div class="container">
+
+    <div>
+      <app-todo-task [tasksList]="tasksList" (emitDone)="done($event)" (emitRemove)="remove($event)"></app-todo-task>
+    </div>
+
+    <div>
+      <app-done-task [tasksDone]="tasksDone"></app-done-task>
+    </div>
+
+  </div>
 </div>
