@@ -43,3 +43,6 @@ Thumbs.db
 .vscode/settings.json
 src/app/test/test.component.spec.ts
 docs/
+webpack/
+coursera angular fullstack/
+compodoc/
