@@ -5,3 +5,7 @@
 <button (click)="updatePost()">updatePost</button>
 <button (click)="deletePost(1)">deletePost</button>
 <button (click)="changePost()">changePost</button>
+
+<div *ngFor="let p of allPosts$ | async">
+  {{p.title}}
+</div>

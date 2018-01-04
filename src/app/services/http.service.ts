@@ -7,10 +7,9 @@ import { HttpParams, HttpClient, HttpResponse } from '@angular/common/http';
 export class HttpService {
   constructor(private http: HttpClient) {}
 
-  getPosts(): Observable<HttpResponse<Response>> {
-    return this.http.get<Response>(
-      'https://jsonplaceholder.typicode.com/posts',
-      { observe: 'response' } // mozna takze skonfigurowac typ json , text itp
+  getPosts(): Observable<Array<Post>> {
+    return this.http.get<Array<Post>>(
+      'https://jsonplaceholder.typicode.com/posts'
     );
   }
 
