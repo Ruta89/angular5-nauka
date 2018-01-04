@@ -62,10 +62,15 @@ export class HttpComponent implements OnInit {
       console.log(delPost);
     });
   }
+
   changePost() {
     const p: Post = {
       id: 1,
       body: 'zmieniam tylko wpis'
     };
+
+    this.httpService.changePost(p).subscribe(patchWork => {
+      console.log(patchWork);
+    });
   }
 }
