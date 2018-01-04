@@ -14,10 +14,10 @@ export class TasksService {
   constructor() {
     console.log('TasksService');
     this.tasksList = [
-      { name: 'zadnie 1', created: new Date() },
-      { name: 'zadnie 2', created: new Date() },
-      { name: 'zadnie 3', created: new Date() },
-      { name: 'zadnie 4', created: new Date() }
+      { name: 'Zaplacic za garaz', created: new Date() },
+      { name: 'Posprzatac', created: new Date() },
+      { name: 'Kupic samochod', created: new Date() },
+      { name: 'Nauczyc się angielskiego', created: new Date() }
     ];
     this.tasksListObs.next(this.tasksList);
   }
