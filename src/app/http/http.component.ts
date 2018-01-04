@@ -14,6 +14,9 @@ export class HttpComponent implements OnInit {
 
   getPosts() {
     console.log('getPosts');
+    this.httpService.getPosts().subscribe(posts => {
+      console.log(posts);
+    });
   }
   getPost() {
     console.log('getPost');
