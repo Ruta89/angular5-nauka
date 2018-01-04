@@ -43,6 +43,7 @@ export class HttpComponent implements OnInit {
       console.log(dodajePost);
     });
   }
+
   updatePost() {
     const p: Post = {
       userId: 1,
@@ -50,7 +51,11 @@ export class HttpComponent implements OnInit {
       title: 'Mój post uaktualniony',
       body: 'Pierwszsy post o angularze! uaktualniony'
     };
+    this.httpService.updatePost(p).subscribe(post => {
+      console.log(post);
+    });
   }
+
   deletePost() {}
   changePost() {
     const p: Post = {
