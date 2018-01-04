@@ -18,10 +18,19 @@ export class HttpComponent implements OnInit {
       console.log(posts);
     });
   }
-  getPost() {
+  getPost(id: number) {
     console.log('getPost');
+    this.httpService.getPost(id).subscribe(post => {
+      console.log(post);
+    });
   }
-  getPostByUser() {}
+
+  getPostByUser(userId: number) {
+    console.log('getPostByUser');
+    this.httpService.getPostByUser(userId).subscribe(userPosts => {
+      console.log(userPosts);
+    });
+  }
   addPost() {
     const post: Post = {
       userId: 1,

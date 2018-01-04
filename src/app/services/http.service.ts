@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../models/post';
 import { Observable } from 'rxjs/Observable';
-// import { HttpParams, HttpClient } from '@angular/common/http';
-import { HttpClient } from '@angular/common/http';
+import { HttpParams, HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class HttpService {
@@ -13,8 +12,19 @@ export class HttpService {
       'https://jsonplaceholder.typicode.com/posts'
     );
   }
-  getPost(id: number) {}
-  getPostByUser(userId: number) {}
+  getPost(id: number): Observable<Post> {
+    return this.http.get<Post>(
+      'https://jsonplaceholder.typicode.com/posts/' + id
+    );
+  }
+  getPostByUser(userId: number): Observable<Array<Post>> {
+    const parm = new HttpParams().set('userId', userId + '');
+
+    return this.http.get<Array<Post>>(
+      'https://jsonplaceholder.typicode.com/posts/',
+      { params: parm }
+    );
+  }
   addPost(post: Post) {}
   updatePost(post: Post) {}
   deletePost(id: number) {}
