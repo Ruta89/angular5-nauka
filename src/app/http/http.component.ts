@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../services/http.service';
 import { Post } from '../models/post';
+import { HttpErrorResponse } from '@angular/common/http';
+import 'rxjs/add/operator/retry';
 
 @Component({
   selector: 'app-http',
@@ -14,9 +16,17 @@ export class HttpComponent implements OnInit {
 
   getPosts() {
     console.log('getPosts');
-    this.httpService.getPosts().subscribe(posts => {
-      console.log(posts);
-    });
+    this.httpService
+      .getPosts()
+      .retry(3)
+      .subscribe(
+        posts => {
+          console.log(posts);
+        },
+        (error: HttpErrorResponse) => {
+          console.log(error.status);
+        }
+      );
   }
   getPost(id: number) {
     console.log('getPost');

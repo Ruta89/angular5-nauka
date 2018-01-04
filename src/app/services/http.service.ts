@@ -9,7 +9,7 @@ export class HttpService {
 
   getPosts(): Observable<Array<Post>> {
     return this.http.get<Array<Post>>(
-      'https://jsonplaceholder.typicode.com/posts'
+      'https://jsonplaceholder.typicode.com/paaaaaaosts' // sprawdzanie wyswietlenia bledu w konsoli
     );
   }
   getPost(id: number): Observable<Post> {
