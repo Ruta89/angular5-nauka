@@ -38,6 +38,10 @@ export class HttpComponent implements OnInit {
       title: 'Mój post',
       body: 'Pierwszsy post o angularze!'
     };
+
+    this.httpService.addPost(post).subscribe(dodajePost => {
+      console.log(dodajePost);
+    });
   }
   updatePost() {
     const p: Post = {
