@@ -1,17 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../models/post';
 import { Observable } from 'rxjs/Observable';
-import { HttpParams, HttpClient } from '@angular/common/http';
+import { HttpParams, HttpClient, HttpResponse } from '@angular/common/http';
 
 @Injectable()
 export class HttpService {
   constructor(private http: HttpClient) {}
 
-  getPosts(): Observable<Array<Post>> {
-    return this.http.get<Array<Post>>(
-      'https://jsonplaceholder.typicode.com/paaaaaaosts' // sprawdzanie wyswietlenia bledu w konsoli
+  getPosts(): Observable<HttpResponse<Response>> {
+    return this.http.get<Response>(
+      'https://jsonplaceholder.typicode.com/posts',
+      { observe: 'response' } // mozna takze skonfigurowac typ json , text itp
     );
   }
+
   getPost(id: number): Observable<Post> {
     return this.http.get<Post>(
       'https://jsonplaceholder.typicode.com/posts/' + id
