@@ -56,7 +56,12 @@ export class HttpComponent implements OnInit {
     });
   }
 
-  deletePost() {}
+  deletePost(id) {
+    console.log(id);
+    this.httpService.deletePost(id).subscribe(delPost => {
+      console.log(delPost);
+    });
+  }
   changePost() {
     const p: Post = {
       id: 1,

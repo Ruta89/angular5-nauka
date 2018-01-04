@@ -40,6 +40,10 @@ export class HttpService {
     );
   }
 
-  deletePost(id: number) {}
+  deletePost(id: number): Observable<Post> {
+    return this.http.delete<Post>(
+      'https://jsonplaceholder.typicode.com/posts/' + id
+    );
+  }
   changePost(post: Post) {}
 }
